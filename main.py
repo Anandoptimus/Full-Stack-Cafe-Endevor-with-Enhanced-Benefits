@@ -139,7 +139,6 @@ def delete(u_id):
     db.session.commit()
     return redirect(url_for('home', u_id=u_id))
 
-
 # HTTP PUT/PATCH - Update Record
 @app.route('/add', methods=['GET', 'POST'])
 def add():
