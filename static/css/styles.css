@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    margin: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+button#addCoffeeBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+header {
+    background-color: #2c3e50; /* Dark blue background color */
+    color: #ecf0f1; /* Light text color */
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 100px 20px 20px;
+    overflow-y: auto;
+}
+
+.coffee-shop {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;  /* Use flexbox for layout */
+    flex-direction: column;
+    height: 100%;
+}
+
+.coffee-shop img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.coffee-details {
+    padding: 15px;
+    flex-grow: 1;  /* Allow the coffee details to grow and take remaining space */
+    display: flex; /* Use flexbox for layout within coffee details */
+    flex-direction: column; /* Stack child elements vertically */
+}
+
+.coffee-details h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.coffee-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.coffee-details .features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+}
+
+.feature img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.feature span {
+    font-size: 0.9em;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    font-size: 0.8em;
+    margin-top: auto;
+}
+
+.logout-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+        }
+
+.logout-icon a {
+    text-decoration: none;
+    color: cyan;
+}
+
+.logout-icon i {
+    margin-right: 5px;
+     color: cyan;
+}
+/* new delete button*/
+.delete-icon {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.delete-icon button {
+    background-color: #fff;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 0; /* Set border-radius to 0 to remove rounded corners */
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+.delete-icon button i {
+    color: #e74c3c;
+    transition: transform 0.3s;
+}
+
+/* Hover effect */
+.delete-icon button:hover i {
+    color: #fff;
+}
+
+.delete-icon button:hover {
+    background-color: #e74c3c;
+    color: #fff;
+    transform: scale(1.1);
+    animation: pulse 0.8s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* end of new d-button*/
+
+.delete-icon {
+background-color: #e74c3c; /* Set the background color of the delete button */
+    padding: 1.px;
+    margin-left: auto; /* This pushes the delete button to the right */
+    margin-top: auto; /* Align the delete button to the bottom */
+}
+
+.delete-icon button {
+    background-color: #fff; /* Set the background color of the delete button */
+    color: #e74c3c; /* Set the text color of the delete button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Adjust the font size if needed */
+}
+.delete-icon button i {
+    color: #e74c3c; /* Set the color of the delete icon to match the button background */
+}
+
+.coffee-shop {
+    transition: transform 0.3s;
+}
+
+.coffee-shop:hover {
+    transform: scale(1.05);
+}
+
+
+/* login style */

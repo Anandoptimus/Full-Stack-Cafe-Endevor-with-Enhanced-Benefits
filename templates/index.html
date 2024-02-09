@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <header>
+    <h1>Coffee Shops</h1>
+        <div class="logout-icon">
+            <a href="{{url_for('signin')}}" methods="post" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+<!--    <button id="addCoffeeBtn" onclick="openForm()">Add Coffee Shop</button>-->
+</header>
+
+
+    <section>
+         {%for i in all_post%}
+        <div class="coffee-shop">
+            <img src="{{i.img_url}}" alt="Coffee Shop">
+            <div class="coffee-details">
+                <h2>Coffee Shop {{i.id}}</h2>
+                <p>Location: {{i.location}}</p>
+                <p>Map: <a href="{{i.map_url}}" target="_blank">View on Map</a></p>
+                <div class="features">
+                    <div class="feature">
+                        {%if i.has_sockets == 1: %}
+                            <img src="{{url_for('static', filename='assets/power-plug.png')}}" alt="Socket">
+                            <span>Has Sockets</span>
+                        {%else%}
+                            <img src="{{url_for('static', filename='assets/no-plug.png')}}" alt="Socket">
+                            <span>No Sockets</span>
+                        {%endif%}
+                    </div>
+
+                    <div class="feature">
+                        {%if i.has_toilet == 1:%}
+                        <img src="{{url_for('static', filename= 'assets/sanitary.png')}}" alt="Toilet">
+                        <span>Has Toilet</span>
+                        {%else:%}
+                        <img src="{{url_for('static', filename= 'assets/no-toileting.png')}}" alt="Toilet">
+                        <span>No Toilet</span>
+                        {%endif%}
+
+                    </div>
+
+                    <div class="feature">
+                        {%if i.has_wifi:%}
+                        <img src="{{url_for('static', filename= 'assets/hotspot.png')}}" alt="WI-FI">
+                        <span>Has Wi-Fi</span>
+                        {%else:%}
+                         <img src="{{url_for('static', filename= 'assets/no-signal.png')}}" alt="WI-FI">
+                        <span>No Wi-Fi</span>
+                        {%endif%}
+
+                    </div>
+
+                    <div class="feature">
+                        {%if i.can_take_calls == 1%}
+                         <img src="{{url_for('static', filename= 'assets/call.png')}}" alt="Call">
+                        <span>Can Take Calls</span>
+                        {%else%}
+                         <img src="{{url_for('static', filename= 'assets/no-call.png')}}" alt="Call">
+                        <span>Can't Take Calls</span>
+                        {%endif%}
+                    </div>
+
+                </div>
+                <p>Seats: {{i.seats}}</p>
+                <p>Coffee Price: {{i.coffee_price}}</p>
+                <div class="delete-icon">
+                   <button onclick="window.location.href='{{ url_for('delete', u_id=i.id) }}'">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Add more coffee shop entries as needed -->
+ {%endfor%}
+    </section>
+
+        <button id="addCoffeeBtn" onclick="window.location.href='{{ url_for('add')}}'">Add Coffee Shop</button>
+
+
+    <footer>
+        <p>&copy; 2024 Coffee Shops</p>
+    </footer>
+<!--<script>-->
+<!--    function openForm() {-->
+<!--        // Add your logic to open a form or perform other actions for adding new coffee details-->
+<!--        alert("Open a form or perform other actions for adding new coffee details!");-->
+<!--    }-->
+<!--</script>-->
+</body>
+</html>

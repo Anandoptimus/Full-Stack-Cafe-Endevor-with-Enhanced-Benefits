@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Coffee Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="{{url_for('form')}}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="img_url">Image URL:</label>
+        <input type="text" id="img_url" name="img_url" required>
+
+        <label for="map_url">Map URL:</label>
+        <input type="text" id="map_url" name="map_url" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+
+        <label for="seats">Seats:</label>
+        <input type="number" id="seats" name="seats" required>
+
+        <label for="has_toilet">Has Toilet:</label>
+        <input type="checkbox" id="has_toilet" name="has_toilet">
+
+        <label for="has_wifi">Has Wi-Fi:</label>
+        <input type="checkbox" id="has_wifi" name="has_wifi">
+
+        <label for="has_sockets">Has Sockets:</label>
+        <input type="checkbox" id="has_sockets" name="has_sockets">
+
+        <label for="can_take_calls">Can Take Calls:</label>
+        <input type="checkbox" id="can_take_calls" name="can_take_calls">
+
+        <label for="coffee_price">Coffee Price:</label>
+        <input type="text" id="coffee_price" name="coffee_price" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
