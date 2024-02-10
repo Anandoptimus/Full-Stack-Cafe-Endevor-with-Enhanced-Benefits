@@ -4,18 +4,7 @@ from sqlalchemy import select
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
-'''
-Install the required packages first: 
-Open the Terminal in PyCharm (bottom left). 
 
-On Windows type:
-python -m pip install -r requirements.txt
-
-On MacOS type:
-pip3 install -r requirements.txt
-
-This will install the packages from requirements.txt for this project.
-'''
 
 app = Flask(__name__, static_url_path='/static')
 
