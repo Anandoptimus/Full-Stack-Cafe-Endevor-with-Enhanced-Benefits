@@ -68,7 +68,7 @@
 
 ## Project Structure
 
-- `app.py`: Main application file.
+- `main.py`: Main application file.
 - `templates/`: HTML templates for rendering views.
 - `static/`: Static files such as stylesheets and images.
 - `models.py`: Database models for Cafe, Deleted History, and User.
