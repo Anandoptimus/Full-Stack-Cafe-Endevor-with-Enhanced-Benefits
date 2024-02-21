@@ -45,6 +45,13 @@
 
 5. **Open your browser and navigate to [http://127.0.0.1:5000/](http://127.0.0.1:5000/)**
 
+## Screenshot
+![image](https://github.com/Anandoptimus/Day88/assets/101982906/f3cc9b24-dbf0-44b8-b566-374499c8fff1)
+![image](https://github.com/Anandoptimus/Day88/assets/101982906/ee8804ba-0e7e-4723-83a8-6b18da14673b)
+![image](https://github.com/Anandoptimus/Day88/assets/101982906/491daf84-6e9a-4095-9b6a-205618878ccc)
+![image](https://github.com/Anandoptimus/Day88/assets/101982906/ecc8cda9-2804-48c9-a709-d2b9412f8e7b)
+
+
 ## Usage
 
 1. **Sign Up:** Create an account to access the full functionality.
