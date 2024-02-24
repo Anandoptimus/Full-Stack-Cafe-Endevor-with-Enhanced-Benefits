@@ -22,13 +22,13 @@
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/Anandoptimus/Day88.git
+    git clone https://github.com/Anandoptimus/Full-Stack-Cafe-Endevor-with-Enhanced-Benefits.git
     ```
 
 2. **Navigate to the project directory:**
 
     ```bash
-    cd Day88
+    cd Full-Stack-Cafe-Endevor-with-Enhanced-Benefits
     ```
 
 3. **Install dependencies:**
