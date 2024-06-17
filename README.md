@@ -74,6 +74,10 @@
 - `models.py`: Database models for Cafe, Deleted History, and User.
 - `requirements.txt`: List of project dependencies.
 
+## Project link
+
+**Open your browser and navigate to [https://anandoptimus.pythonanywhere.com/](https://anandoptimus.pythonanywhere.com/)**
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have ideas for improvements, feel free to open an issue or submit a pull request.
